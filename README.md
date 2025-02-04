@@ -11,3 +11,4 @@ ___
 
 This profile image ![me](./me.png) in the website [abujuni.dev](https://abujuni.dev) is the exclusive property of Junaid. Unauthorized use, reproduction, modification, or distribution in any form is strictly prohibited without prior written consent.
 ___
+In short: I don't want AI use my image.
