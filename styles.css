@@ -1,0 +1,51 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+@keyframes gradientBorder {
+    0% { border-color: #ff7e5f; }
+    50% { border-color: #feb47b; }
+    100% { border-color: #ff7e5f; }
+}
+
+.animated-border {
+    animation: gradientBorder 3s infinite;
+}
+
+@keyframes starShine {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.star-shine {
+    animation: starShine 1s infinite;
+}
+
+.wave-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-effect::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;
+}
+
+.wave-effect:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.orange-theme {
+    background-color: #ff7e5f;
+    color: #fff;
+}
