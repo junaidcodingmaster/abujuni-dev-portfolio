@@ -1,51 +1,226 @@
-body {
-    font-family: 'Roboto Mono', monospace;
+/* Default Theme (Blue-Contrast) */
+body.default {
+      background-color: #1a1a1a; /* Dark background */
+      color: #ffffff; /* White text */
 }
 
-@keyframes gradientBorder {
-    0% { border-color: #ff7e5f; }
-    50% { border-color: #feb47b; }
-    100% { border-color: #ff7e5f; }
+body.default .box {
+      background-color: #2d2d2d; /* Slightly lighter dark gray for boxes */
+      border: 2px solid #3b82f6; /* Blue border */
 }
 
-.animated-border {
-    animation: gradientBorder 3s infinite;
+body.default header img {
+      border-color: #3b82f6; /* Blue border for profile image */
 }
 
-@keyframes starShine {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+body.default footer {
+      background-color: #2d2d2d; /* Slightly lighter dark gray for footer */
 }
 
-.star-shine {
-    animation: starShine 1s infinite;
+body.default a {
+      color: #3b82f6; /* Blue links */
 }
 
-.wave-effect {
-    position: relative;
-    overflow: hidden;
+body.default a:hover {
+      color: #60a5fa; /* Lighter blue on hover */
 }
 
-.wave-effect::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s, opacity 0.5s;
-    opacity: 0;
+/* Light Theme */
+body.light {
+      background-color: #ffffff; /* White background */
+      color: #000000; /* Black text */
 }
 
-.wave-effect:hover::after {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
+body.light .box {
+      background-color: #f3f4f6; /* Light gray for boxes */
+      border: 2px solid #3b82f6; /* Blue border */
 }
 
-.orange-theme {
-    background-color: #ff7e5f;
-    color: #fff;
+body.light header img {
+      border-color: #3b82f6; /* Blue border for profile image */
+}
+
+body.light footer {
+      background-color: #f3f4f6; /* Light gray for footer */
+}
+
+body.light a {
+      color: #3b82f6; /* Blue links */
+}
+
+body.light a:hover {
+      color: #60a5fa; /* Lighter blue on hover */
+}
+
+/* Green Contrast Theme */
+body.green {
+      background-color: #1a1a1a; /* Dark background */
+      color: #ffffff; /* White text */
+}
+
+body.green .box {
+      background-color: #2d2d2d; /* Slightly lighter dark gray for boxes */
+      border: 2px solid #22c55e; /* Green border */
+}
+
+body.green header img {
+      border-color: #22c55e; /* Green border for profile image */
+}
+
+body.green footer {
+      background-color: #2d2d2d; /* Slightly lighter dark gray for footer */
+}
+
+body.green a {
+      color: #22c55e; /* Green links */
+}
+
+body.green a:hover {
+      color: #4ade80; /* Lighter green on hover */
+}
+
+/* Orange Contrast Theme */
+body.orange {
+      background-color: #1a1a1a; /* Dark background */
+      color: #ffffff; /* White text */
+}
+
+body.orange .box {
+      background-color: #2d2d2d; /* Slightly lighter dark gray for boxes */
+      border: 2px solid #f97316; /* Orange border */
+}
+
+body.orange header img {
+      border-color: #f97316; /* Orange border for profile image */
+}
+
+body.orange footer {
+      background-color: #2d2d2d; /* Slightly lighter dark gray for footer */
+}
+
+body.orange a {
+      color: #f97316; /* Orange links */
+}
+
+body.orange a:hover {
+      color: #fb923c; /* Lighter orange on hover */
+}
+
+/* Purple Contrast Theme */
+body.purple {
+      background-color: #1a1a1a; /* Dark background */
+      color: #ffffff; /* White text */
+}
+
+body.purple .box {
+      background-color: #2d2d2d; /* Slightly lighter dark gray for boxes */
+      border: 2px solid #a855f7; /* Purple border */
+}
+
+body.purple header img {
+      border-color: #a855f7; /* Purple border for profile image */
+}
+
+body.purple footer {
+      background-color: #2d2d2d; /* Slightly lighter dark gray for footer */
+}
+
+body.purple a {
+      color: #a855f7; /* Purple links */
+}
+
+body.purple a:hover {
+      color: #c084fc; /* Lighter purple on hover */
+}
+
+/* Contrast Theme (Black and White) */
+body.contrast {
+      background-color: #000000; /* Black background */
+      color: #ffffff; /* White text */
+}
+
+body.contrast .box {
+      background-color: #1a1a1a; /* Dark gray for boxes */
+      border: 2px solid #ffffff; /* White border */
+}
+
+body.contrast header img {
+      border-color: #ffffff; /* White border for profile image */
+}
+
+body.contrast footer {
+      background-color: #1a1a1a; /* Dark gray for footer */
+}
+
+body.contrast a {
+      color: #ffffff; /* White links */
+}
+
+body.contrast a:hover {
+      color: #cccccc; /* Light gray on hover */
+}
+
+/* Theme Circles */
+.theme-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+}
+
+.theme-circle:hover {
+      transform: scale(1.2);
+}
+
+/* Box Hover Effect */
+.box {
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+}
+
+.box:hover {
+      transform: scale(1.05);
+}
+
+.box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s ease;
+}
+
+.box:hover::after {
+      left: 100%;
+}
+
+/* Spinning Effect */
+@keyframes spin {
+      from {
+            transform: rotate(0deg);
+      }
+      to {
+            transform: rotate(360deg);
+      }
+}
+
+.spin {
+      animation: spin 1s linear infinite;
+}
+
+/* Animation Toggle Button */
+#animationToggle {
+      transition: background-color 0.3s ease;
+}
+
+#animationToggle:hover {
+      background-color: #4b5563; /* Darker gray on hover */
 }
