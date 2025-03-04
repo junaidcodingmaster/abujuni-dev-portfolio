@@ -1,477 +1,54 @@
-<<<<<<< HEAD
-/* Base Fonts & Transition */
+/* Base Theme */
 body {
-  font-family: 'Roboto Mono', monospace;
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out; 
+    font-family: 'Roboto Mono', monospace;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out; 
 }
 
-/* Dark Theme Flavors */
-body.default-theme {
-  background: #121212;
-  color: #fff;
-}
-body.dark-blue {
-  background: #0d1b2a;
-  color: #fff;
-}
-body.dark-purple {
-  background: #1a001a;
-  color: #fff;
-}
+/* Dark Themes */
+body.default-theme { background: #121212; color: #fff; }
+body.dark-blue { background: #0d1b2a; color: #fff; }
+body.dark-purple { background: #1a001a; color: #fff; }
 
-/* Header Section */
-.header {
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-}
+/* Gradient Border Effect */
 .profile-img {
-  border: 4px solid transparent;
-  border-image: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff) 1;
-  animation: borderAnimation 4s linear infinite;
+    border: 4px solid transparent;
+    border-image: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff) 1;
+    animation: borderAnimation 4s linear infinite;
 }
 @keyframes borderAnimation {
-  0% {
-    border-image: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff) 1;
-  }
-  50% {
-    border-image: linear-gradient(45deg, #3a86ff, #ff006e, #8338ec) 1;
-  }
-  100% {
-    border-image: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff) 1;
-  }
-}
-.header-title {
-  font-size: 3rem;
-  margin-top: 10px;
-}
-.header-text {
-  font-size: 1.2rem;
+    0%, 100% { border-image: linear-gradient(45deg, #ff006e, #8338ec, #3a86ff) 1; }
+    50% { border-image: linear-gradient(45deg, #3a86ff, #ff006e, #8338ec) 1; }
 }
 
 /* Alert Box */
 .hidden-alert {
-  display: none;
-  max-width: 600px;
-  margin: 10px auto;
-  padding: 10px;
-  border: 2px solid yellow;
-  background: rgba(255, 255, 0, 0.1);
-  color: yellow;
-  text-align: center;
-  border-radius: 5px;
-}
-
-/* Container Sections */
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #222;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Section Titles */
-.section-title {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Grid Containers for Skills, Projects, Contacts */
-.grid-container {
-  display: grid;
-  grid-gap: 15px;
-  padding: 0 10px;
-}
-.skills-grid,
-.contacts-grid,
-#working-content {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
-.grid-item,
-.contact-item,
-.project-card {
-  background: #333;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: left;
-  word-wrap: break-word;
-  transition: background 0.3s ease;
-}
-.grid-item:hover {
-  background: linear-gradient(45deg, #1e90ff, #ff4500);
-}
-
-/* Contact Section */
-.contacts-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-gap: 20px; /* Spacing between items */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    display: none;
+    max-width: 600px;
+    margin: 10px auto;
     padding: 10px;
-}
-
-.contacts-grid a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px;
-    background: #333;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #1e90ff;
-    transition: background 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, opacity 0.5s ease;
-    width: 100%;
-    max-width: 250px; /* Prevents items from stretching too much */
-    margin: auto; /* Centers each item */
-}
-
-/* Hover & Active Effects */
-.contacts-grid a:hover {
-    background: linear-gradient(45deg, #1e90ff, #ff4500);
-    color: #ffcc00;
-    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
-}
-
-.contacts-grid a:active {
-    opacity: 0.5; /* Fades when clicked */
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #181818;
-  margin-top: 20px;
-}
-.github-fork {
-  display: inline-block;
-  margin-top: 10px;
-  color: #ffcc00;
-  text-decoration: none;
-}
-.github-fork i {
-  margin-right: 5px;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ffcc00, #ff4500);
-  border-radius: 10px;
-}
-a {
-    color: #1e90ff; /* Default link color */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-a:hover {
-    color: #7bcbd4; /* Hover color */
-    text-shadow: 0 0 10px rgba(123, 203, 212, 0.8);
-}
-
-a:active {
-    color: #7bd4b2; /* Active (clicking) color */
-}
-
-a.dark-theme {
-    color: #bb86fc;
-}
-
-a.dark-theme:hover {
-    color: #ff4081;
-    text-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
-}
-
-.github-btn, .custom-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 10px;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-/* GitHub Button */
-.github-btn, .custom-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 14px;
-    min-width: 160px; /* Ensures equal button width */
+    border: 2px solid yellow;
+    background: rgba(255, 255, 0, 0.1);
+    color: yellow;
     text-align: center;
-    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
 }
 
-/* GitHub Button */
-.github-btn {
-    background: #24292e; /* GitHub dark theme */
-    color: white;
-}
-.github-btn:hover {
-    background: #333;
-    transform: scale(1.05);
-}
-
-/* Custom Button with Favicon */
-.custom-btn {
-    background: #333; /* Matches GitHub button */
-    color: white;
-    border: solid white 1.2px;
-}
-.custom-btn:hover {
-    background: #444;
-    transform: scale(1.05);
-    border: solid white 2px;
-}
-
-.favicon {
-    width: 16px;
-    height: 16px;
-    border-radius: 3px; /* Makes favicon look cleaner */
-=======
-/* Default Theme (Blue-Contrast) */
-body.default {
-      background-color: #1a1a1a; /* Dark background */
-      color: #ffffff; /* White text */
-}
-
-body.default .box {
-      background-color: #2d2d2d; /* Slightly lighter dark gray for boxes */
-      border: 2px solid #3b82f6; /* Blue border */
-}
-
-body.default header img {
-      border-color: #3b82f6; /* Blue border for profile image */
-}
-
-body.default footer {
-      background-color: #2d2d2d; /* Slightly lighter dark gray for footer */
-}
-
-body.default a {
-      color: #3b82f6; /* Blue links */
-}
-
-body.default a:hover {
-      color: #60a5fa; /* Lighter blue on hover */
-}
-
-/* Light Theme */
-body.light {
-      background-color: #ffffff; /* White background */
-      color: #000000; /* Black text */
-}
-
-body.light .box {
-      background-color: #f3f4f6; /* Light gray for boxes */
-      border: 2px solid #3b82f6; /* Blue border */
-}
-
-body.light header img {
-      border-color: #3b82f6; /* Blue border for profile image */
-}
-
-body.light footer {
-      background-color: #f3f4f6; /* Light gray for footer */
-}
-
-body.light a {
-      color: #3b82f6; /* Blue links */
-}
-
-body.light a:hover {
-      color: #60a5fa; /* Lighter blue on hover */
-}
-
-/* Green Contrast Theme */
-body.green {
-      background-color: #1a1a1a; /* Dark background */
-      color: #ffffff; /* White text */
-}
-
-body.green .box {
-      background-color: #2d2d2d; /* Slightly lighter dark gray for boxes */
-      border: 2px solid #22c55e; /* Green border */
-}
-
-body.green header img {
-      border-color: #22c55e; /* Green border for profile image */
-}
-
-body.green footer {
-      background-color: #2d2d2d; /* Slightly lighter dark gray for footer */
-}
-
-body.green a {
-      color: #22c55e; /* Green links */
-}
-
-body.green a:hover {
-      color: #4ade80; /* Lighter green on hover */
-}
-
-/* Orange Contrast Theme */
-body.orange {
-      background-color: #1a1a1a; /* Dark background */
-      color: #ffffff; /* White text */
-}
-
-body.orange .box {
-      background-color: #2d2d2d; /* Slightly lighter dark gray for boxes */
-      border: 2px solid #f97316; /* Orange border */
-}
-
-body.orange header img {
-      border-color: #f97316; /* Orange border for profile image */
-}
-
-body.orange footer {
-      background-color: #2d2d2d; /* Slightly lighter dark gray for footer */
-}
-
-body.orange a {
-      color: #f97316; /* Orange links */
-}
-
-body.orange a:hover {
-      color: #fb923c; /* Lighter orange on hover */
-}
-
-/* Purple Contrast Theme */
-body.purple {
-      background-color: #1a1a1a; /* Dark background */
-      color: #ffffff; /* White text */
-}
-
-body.purple .box {
-      background-color: #2d2d2d; /* Slightly lighter dark gray for boxes */
-      border: 2px solid #a855f7; /* Purple border */
-}
-
-body.purple header img {
-      border-color: #a855f7; /* Purple border for profile image */
-}
-
-body.purple footer {
-      background-color: #2d2d2d; /* Slightly lighter dark gray for footer */
-}
-
-body.purple a {
-      color: #a855f7; /* Purple links */
-}
-
-body.purple a:hover {
-      color: #c084fc; /* Lighter purple on hover */
-}
-
-/* Contrast Theme (Black and White) */
-body.contrast {
-      background-color: #000000; /* Black background */
-      color: #ffffff; /* White text */
-}
-
-body.contrast .box {
-      background-color: #1a1a1a; /* Dark gray for boxes */
-      border: 2px solid #ffffff; /* White border */
-}
-
-body.contrast header img {
-      border-color: #ffffff; /* White border for profile image */
-}
-
-body.contrast footer {
-      background-color: #1a1a1a; /* Dark gray for footer */
-}
-
-body.contrast a {
-      color: #ffffff; /* White links */
-}
-
-body.contrast a:hover {
-      color: #cccccc; /* Light gray on hover */
-}
+/* Project Section */
+.project-links .custom-btn img { width: 16px; height: 16px; border-radius: 3px; }
 
 /* Theme Circles */
 .theme-circle {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: transform 0.2s ease;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
+.theme-circle:hover { transform: scale(1.2); }
 
-.theme-circle:hover {
-      transform: scale(1.2);
-}
+/* Animation Toggle */
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-/* Box Hover Effect */
-.box {
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-}
-
-.box:hover {
-      transform: scale(1.05);
-}
-
-.box::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-      transition: left 0.5s ease;
-}
-
-.box:hover::after {
-      left: 100%;
-}
-
-/* Spinning Effect */
-@keyframes spin {
-      from {
-            transform: rotate(0deg);
-      }
-      to {
-            transform: rotate(360deg);
-      }
-}
-
-.spin {
-      animation: spin 1s linear infinite;
-}
-
-/* Animation Toggle Button */
-#animationToggle {
-      transition: background-color 0.3s ease;
-}
-
-#animationToggle:hover {
-      background-color: #4b5563; /* Darker gray on hover */
->>>>>>> branch 'main' of https://github.com/junaidcodingmaster/abujuni-dev-portfolio.git
-}
+#animationToggle { transition: background-color 0.3s ease; }
+#animationToggle:hover { background-color: #4b5563; }
