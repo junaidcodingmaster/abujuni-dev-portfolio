@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<<<<<<< HEAD
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junaid - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="default-theme">
+  <!-- Header Section -->
+  <header class="header">
+    <img alt="Profile image of Junaid" class="profile-img" src="./img/me.png" height="150" width="150" />
+    <h1 class="header-title">Junaid</h1>
+    <p class="header-text">Age: <span id="dynamic-age">17</span></p>
+    <p class="header-text">Coding since age 10</p>
+  </header>
+
+  <!-- Alert Box (Below Header) -->
+  <div id="alert-box" class="hidden-alert">
+    <strong id="alert-title"></strong>
+    <p id="alert-text"></p>
+  </div>
+
+  <!-- Skills Section -->
+  <section class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="grid-container skills-grid">
+      <div class="grid-item">HTML</div>
+      <div class="grid-item">CSS</div>
+      <div class="grid-item">JavaScript</div>
+      <div class="grid-item">React</div>
+      <div class="grid-item">Next.js</div>
+      <div class="grid-item">Vue</div>
+      <div class="grid-item">Rust</div>
+      <div class="grid-item">Node.js</div>
+      <div class="grid-item">Python</div>
+      <div class="grid-item">Linux</div>
+      <div class="grid-item">IoT</div>
+    </div>
+  </section>
+
+  <!-- Currently Working On Section -->
+  <section id="working-on" class="container">
+    <h2 class="section-title">Currently Working On</h2>
+    <div id="working-content" class="grid-container"></div>
+  </section>
+
+  <!-- Contacts Section -->
+  <section class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="grid-container contacts-grid">
+        <a href="https://dev.to/junaid_dev" target="_blank">
+            <i class="fab fa-dev"></i> junaid_dev
+        </a>
+        <a href="https://github.com/junaidcodingmaster" target="_blank">
+            <i class="fab fa-github"></i> junaidcodingmaster
+        </a>
+        <a href="mailto:junaid@abujuni.dev">
+            <i class="fas fa-envelope"></i> junaid@abujuni.dev
+        </a>
+        <a href="mailto:support@abujuni.dev">
+            <i class="fas fa-envelope"></i> support@abujuni.dev
+        </a>
+    </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Junaid. All rights reserved.</p>
+    <a href="https://github.com/junaidcodingmaster/Super-Bloatware-Remover" class="github-fork">
+      <i class="fab fa-github"></i> Fork on GitHub
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+=======
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Junaid</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="default">
+<button id="themeButton" class="fixed top-4 right-4 p-2 bg-gray-700 text-white rounded-full z-50">
+      <i class="fas fa-palette"></i>
+</button>
+<div id="themeSelector" class="fixed top-16 right-4 hidden z-50">
+      <div class="flex space-x-2">
+            <div class="theme-circle bg-blue-500" data-theme="blue"></div>
+            <div class="theme-circle bg-green-500" data-theme="green"></div>
+            <div class="theme-circle bg-orange-500" data-theme="orange"></div>
+            <div class="theme-circle bg-purple-500" data-theme="purple"></div>
+            <div class="theme-circle bg-black" data-theme="contrast"></div>
+            <div class="theme-circle bg-gray-500" data-theme="default"></div>
+            <div class="theme-circle bg-white" data-theme="light"></div>
+            <button id="resetButton" class="mt-2 p-2 bg-red-500 text-white rounded">Reset</button>
+      </div>
+</div>
+<button id="animationToggle" class="fixed top-4 right-16 p-2 bg-gray-700 text-white rounded-full z-50">
+      <i class="fas fa-play" id="animationIcon"></i> <!-- Default icon is play -->
+</button>
+
+      <header class="text-center py-10">
+            <img alt="Profile image of Junaid, a 17-year-old developer"
+                  class="rounded-full mx-auto border-4 border-green-400" height="150" src="./img/me.png" width="150" />
+            <h1 class="text-4xl font-bold mt-4">Junaid</h1>
+            <p class="text-xl mt-2">Age: 17</p>
+            <p class="text-xl mt-2">Coding since age 10</p>
+      </header>
+      <section class="max-w-4xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg box">
+            <h2 class="text-3xl font-bold mb-4">Skills</h2>
+            <div class="mb-6">
+                  <h3 class="text-2xl font-semibold">Web Development</h3>
+                  <ul class="list-disc list-inside">
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-html5 text-2xl"></i>
+                              <span>HTML</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-js text-2xl"></i>
+                              <span>JavaScript</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-css3-alt text-2xl"></i>
+                              <span>CSS</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-react text-2xl"></i>
+                              <span>React</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-js-square text-2xl"></i>
+                              <span>Expo JS</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-vuejs text-2xl"></i>
+                              <span>Vue</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-react text-2xl"></i>
+                              <span>Next.js</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-react text-2xl"></i>
+                              <span>React Native</span>
+                        </li>
+                  </ul>
+            </div>
+            <div class="mb-6">
+                  <h3 class="text-2xl font-semibold">Backend</h3>
+                  <ul class="list-disc list-inside">
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-python text-2xl"></i>
+                              <span>Python</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fas fa-cogs text-2xl"></i>
+                              <span>Rust</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-node-js text-2xl"></i>
+                              <span>Node.js</span>
+                        </li>
+                  </ul>
+            </div>
+            <div>
+                  <h3 class="text-2xl font-semibold">Other Interests</h3>
+                  <ul class="list-disc list-inside">
+                        <li class="flex items-center space-x-2">
+                              <i class="fab fa-linux text-2xl"></i>
+                              <span>Linux</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fas fa-microchip text-2xl"></i>
+                              <span>Embedded Linux Devices</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fas fa-raspberry-pi text-2xl"></i>
+                              <span>Raspberry Pi</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                              <i class="fas fa-network-wired text-2xl"></i>
+                              <span>IoT</span>
+                        </li>
+                  </ul>
+            </div>
+      </section>
+      <section class="max-w-4xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg mt-10 box">
+            <h2 class="text-3xl font-bold mb-4">Currently Working On</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold">UNDER CONSTRUCTION</h3>
+                        <p class="mt-2">
+                              Sorry, currently my public exams approaching in 1 month - on March month.
+                              So, page left under construction.
+                              And I wrote this whole website in GitHub mobile app.
+                        </p>
+                  </div>
+            </div>
+      </section>
+      <section class="max-w-4xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg mt-10 box">
+            <h2 class="text-3xl font-bold mb-4">Contact</h2>
+            <div class="flex flex-col space-y-4">
+                  <a class="text-xl flex items-center" href="https://dev.to/junaid_dev">
+                        <i class="fab fa-dev mr-2"></i>
+                        junaid_dev
+                  </a>
+                  <a class="text-xl flex items-center" href="https://github.com/junaidcodingmaster">
+                        <i class="fab fa-github mr-2"></i>
+                        junaidcodingmaster
+                  </a>
+                  <p class="text-xl flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        junaid@abujuni.dev
+                  </p>
+                  <p class="text-xl flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        support@abujuni.dev
+                  </p>
+            </div>
+      </section>
+      <footer class="text-center py-6 mt-10 bg-gray-800">
+            <p>Copyright © 2025 Junaid. All rights reserved.</p>
+      </footer>
+
+      <script src="script.js"></script>
+>>>>>>> branch 'main' of https://github.com/junaidcodingmaster/abujuni-dev-portfolio.git
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "title": "Super Bloatware Remover",
+      "description": "Removes 98% bloatware apps made with Rust and open-source.",
+      "links": [
+        "https://github.com/junaidcodingmaster/super-bloatware-remover"
+      ]
+    }
+  ],
+  "alert": true,
+  "alert-title": "Important Update!",
+  "alert-info": "I’m currently focused on my 12th-grade public exams, so I can’t take on new projects or maintain my open-source work for now. I’ll be back after exams!"
+}
