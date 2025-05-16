@@ -1,4 +1,14 @@
-<<<<<<< HEAD
+# NEWS
+I have working on new portfolio via my Laptop. So, I am discontinuing this project!
+
+**AIM of this project to build an awsome portfolio using Just Mobile/Tab**
+
+I hope anyone Inspried by This, and made there awsome or something portfolio using in minimum requriments or something fun project.
+Thankyou!
+
+[Junaid](https://abujuni.dev)
+
+
 # My Portfolio 🚀  
 
 Hey! This is my **personal portfolio**, built with **HTML, CSS, and JavaScript**, and hosted on **GitHub Pages**.  
